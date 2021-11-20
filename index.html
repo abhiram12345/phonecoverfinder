@@ -37,7 +37,7 @@ th{background-color:#F6BE00;color:black;}
         </div>
         <div class="search"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEhpiOj_B-s5AIQM7rK9ruTGFbxKSfNUqQAEn_9DUvCb09YLeYeR8X4xKMTOovM2nNu9xHy1RubmB7OaqFh_Xy7yKWJNw1CY2A-yZ726_FLjou-w34qU50-Vzm55Ie1SyJMptX6TP9uxz6783WZkgsEkwYLQVQ7iV6URKyOYHPSLEjZkyJafrY5yiWDM=s240" class="searchicon"></div>
     </body>
-    <script>
+    <script type="text/javscript">
         function create(){var body = document.getElementsByTagName("body")[0];
 //Linebreak
 var linebreak = document.createElement("BR");
@@ -205,8 +205,8 @@ function restore(){
 if (localStorage.getItem("tdvalues")!==null){for (i=0;i<allcells.length;i++)
     {if(passTestfunc(allcells[i])){continue;}allcells[i].innerHTML = JSON.parse(localStorage.getItem("tdvalues")[i]);}};
 }
-window.onload = function (){create();var items = document.getElementsByTagName("td");
-for(i=0;i<items.length;i++){items[i].addEventListener("click",edit);};close();restore();}
+create();var items = document.getElementsByTagName("td");
+for(i=0;i<items.length;i++){items[i].addEventListener("click",edit);};close();restore();
         </script>
 </html>
 

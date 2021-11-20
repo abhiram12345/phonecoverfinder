@@ -202,8 +202,8 @@ function backup(){
 function restore(){
    var table = document.getElementsByTagName("table")[0];
     var allcells = table.querySelectorAll("td");
-if (localStorage.getItem("tdvalues")!==null){for (i=0;i<allcells.length;i++)
-    {if(passTestfunc(allcells[i])){continue;}allcells[i].innerHTML = JSON.parse(localStorage.getItem("tdvalues")[i]);}};
+for (i=0;i<allcells.length;i++)
+    {if(passTestfunc(allcells[i])){continue;}allcells[i].innerHTML = JSON.parse(localStorage.getItem("tdvalues")[i]);};
 }
 create();var items = document.getElementsByTagName("td");
 for(i=0;i<items.length;i++){items[i].addEventListener("click",edit);};close();restore();

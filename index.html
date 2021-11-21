@@ -158,6 +158,7 @@ popup.appendChild(inputc);
 popupp.appendChild(popup);
 popupp.appendChild(closer);
 body.appendChild(popupp);}
+create();
 //2
 function edit(){
 var inputalert = document.getElementById("inputalert");
@@ -205,7 +206,7 @@ function restore(){
 for (i=0;i<allcells.length;i++)
     {if(passTestfunc(allcells[i])){continue;}allcells[i].innerHTML = JSON.parse(localStorage.getItem("tdvalues")[i]);};
 }
-create();var items = document.getElementsByTagName("td");
+var items = document.getElementsByTagName("td");
 for(i=0;i<items.length;i++){items[i].addEventListener("click",edit);};close();restore();
         </script>
 </html>

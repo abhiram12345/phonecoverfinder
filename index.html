@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <title>Phone Case Finder</title>
         <style>
-            body{background-color:white;color:white;font-family: Arial;font-size:15px;}
+            body{background-color:black;color:white;font-family: Arial;font-size:15px;}
 table{width:100%;}
 table,td{border:1px solid #F6BE00;border-collapse:collapse;}
 th,td{padding:15px;}
@@ -199,7 +199,9 @@ function backup(){
    var table = document.getElementsByTagName("table")[0];
     var allcells = table.querySelectorAll("td");
     for (i=0;i<allcells.length;i++)
-    {if(passTestfunc(allcells[i])){continue;}const cellvalues = [];cellvalues.push(allcells[i].innerText);alert(cellvalues);};
+    {if(passTestfunc(allcells[i])){continue;}const cellvalues = [];cellvalues.push(allcells[i].innerText);};
+    var stringedtdv = JSON.stringify(cellvlues);
+    localStorage.setItem("tdv",stringedtdv);
 }
 function restore(){
    var table = document.getElementsByTagName("table")[0];

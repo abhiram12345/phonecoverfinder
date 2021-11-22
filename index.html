@@ -202,11 +202,10 @@ function backup(){
     {if(passTestfunc(allcells[i])){continue;}const cellvalues = [];cellvalues.push(allcells[i].innerText);};
     var stringedtdv = JSON.stringify(cellvalues);
     localStorage.tdv=stringedtdv;}
-function rrestore(){
+function restore(){
     var table1=document.getElementsByTagName("table")[0];
     var allcells = table1.querySelectorAll("td");
-    var restored = JSON.parse(localStorage.getItem("tdv"));
-    for(m=0;m<allcells.length;m++){if(passTestfunc(allcells[m])){continue;}allcells[m].innerText=restored[m];};
+    var restored = JSON.parse(localStorage.getItem("tdv"));};
 }
 window.onload = function (){var items = document.getElementsByTagName("td");
 for(j=0;j<items.length;j++){items[j].addEventListener("click",edit);};close();}

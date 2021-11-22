@@ -201,7 +201,7 @@ function backup(){
     for (i=0;i<allcells.length;i++)
     {if(passTestfunc(allcells[i])){continue;}const cellvalues = [];cellvalues.push(allcells[i].innerText);};
     var stringedtdv = JSON.stringify(cellvalues);
-    localStorage.setItem("tdv",stringedtdv);else{alert("doesn't support")}
+    localStorage.setItem("tdv",stringedtdv))}}
 function restore(){
     var table1=document.getElementsByTagName("table")[0];
     var allcells = table1.querySelectorAll("td");

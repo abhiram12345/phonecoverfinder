@@ -200,7 +200,7 @@ function backup(){
     var allcells = table.querySelectorAll("td");
     for (i=0;i<allcells.length;i++)
     {if(passTestfunc(allcells[i])){continue;}const cellvalues = [];cellvalues.push(allcells[i].innerText);};
-    var stringedtdv = JSON.stringify(cellvlues);
+    var stringedtdv = cellvalues.JSON.stringify();
     localStorage.tdv=stringedtdv;
 }
 function restore(){

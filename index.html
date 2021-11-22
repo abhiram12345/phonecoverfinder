@@ -37,7 +37,7 @@ th{background-color:#F6BE00;color:black;}
                 </tr>
             </table>
         </div>
-        <div class="search"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEhpiOj_B-s5AIQM7rK9ruTGFbxKSfNUqQAEn_9DUvCb09YLeYeR8X4xKMTOovM2nNu9xHy1RubmB7OaqFh_Xy7yKWJNw1CY2A-yZ726_FLjou-w34qU50-Vzm55Ie1SyJMptX6TP9uxz6783WZkgsEkwYLQVQ7iV6URKyOYHPSLEjZkyJafrY5yiWDM=s240" class="searchicon"></div>
+        <div class="search"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEhpiOj_B-s5AIQM7rK9ruTGFbxKSfNUqQAEn_9DUvCb09YLeYeR8X4xKMTOovM2nNu9xHy1RubmB7OaqFh_Xy7yKWJNw1CY2A-yZ726_FLjou-w34qU50-Vzm55Ie1SyJMptX6TP9uxz6783WZkgsEkwYLQVQ7iV6URKyOYHPSLEjZkyJafrY5yiWDM=s240" class="searchicon" onclick="restore()"></div>
         <script>
             function create(){var body = document.getElementsByTagName("body")[0];
 //Linebreak
@@ -208,7 +208,7 @@ function restore(){
     var restored = JSON.parse(localStorage.getItem("tdv"));
 alert(restored)};
 window.onload = function (){var items = document.getElementsByTagName("td");
-for(j=0;j<items.length;j++){items[j].addEventListener("click",edit);};close();restore();}
+for(j=0;j<items.length;j++){items[j].addEventListener("click",edit);};close();}
         </script>
     </body>
 </html>

@@ -201,12 +201,8 @@ function backup(){
    if(typeof(Storage) !== "undefined") { for (i=0;i<allcells.length;i++)
     {if(passTestfunc(allcells[i])){continue;}const cellvalues = [];cellvalues.push(allcells[i].innerText);};
     var stringedtdv = JSON.stringify(cellvalues);
-    localStorage.tdv=stringedtdv;}
-}
-function restore(){
-   var table = document.getElementsByTagName("table")[0];
-    var allcells = table.querySelectorAll("td");
-    var restored[] = JSON.parse(localStorage.getItem("tdv"));
+    localStorage.tdv=stringedtdv;
+    var restored = JSON.parse(localStorage.getItem("tdv"));
     for(m=0;m<allcells.length;m++){if(passTestfunc(allcells[m])){continue;}allcells[m].innerText=restored[m];};
 }
 window.onload = function (){var items = document.getElementsByTagName("td");

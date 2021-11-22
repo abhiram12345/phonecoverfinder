@@ -200,12 +200,12 @@ function backup(){
     var allcells = table.querySelectorAll("td");
     for (i=0;i<allcells.length;i++)
     {if(passTestfunc(allcells[i])){continue;}const cellvalues = [];cellvalues.push(allcells[i].innerText);};
-    const stringedtdv = JSON.stringify(cellvalues);
-    localStorage.setItem("tdv",stringedtdv);}else{alert("doesn't support")}
+    var stringedtdv = JSON.stringify(cellvalues);
+    localStorage.setItem(tdv,stringedtdv);}else{alert("doesn't support")}
 function restore(){
     var table1=document.getElementsByTagName("table")[0];
     var allcells = table1.querySelectorAll("td");
-    const restored = JSON.parse(localStorage.getItem("tdv"));
+    var restored = JSON.parse(localStorage.getItem("tdv"));
 alert(restored + "x6")};
 window.onload = function (){var items = document.getElementsByTagName("td");
 for(j=0;j<items.length;j++){items[j].addEventListener("click",edit);};close();backup()}

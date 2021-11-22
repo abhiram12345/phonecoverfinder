@@ -201,12 +201,12 @@ function backup(){
    if(typeof(Storage) !== "undefined") { for (i=0;i<allcells.length;i++)
     {if(passTestfunc(allcells[i])){continue;}const cellvalues = [];cellvalues.push(allcells[i].innerText);};
     var stringedtdv = JSON.stringify(cellvalues);
-    localStorage.setItem("tdv",stringedtdv);}}
+    localStorage.setItem("tdv",cellvalues);}}
 function restore(){
     var table1=document.getElementsByTagName("table")[0];
     var allcells = table1.querySelectorAll("td");
     var restored = JSON.parse(localStorage.getItem("tdv"));
-alert(restored + "2")};
+alert(restored + "3")};
 window.onload = function (){var items = document.getElementsByTagName("td");
 for(j=0;j<items.length;j++){items[j].addEventListener("click",edit);};close();}
         </script>

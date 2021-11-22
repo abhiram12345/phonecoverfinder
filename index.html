@@ -207,7 +207,7 @@ function restore(){
    var table = document.getElementsByTagName("table")[0];
     var allcells = table.querySelectorAll("td");
     var restored = JSON.parse(localStorage.getItem("tdv"));
-   if(typeof(Storage) !== "undefined") { for(m=0;m<allcells.length;m++){if(passTestfunc(allcells[m])){continue;}allcells[m].innerText=restored[i];};
+   if(typeof(Storage) !== "undefined") { for(m=0;m<allcells.length;m++){if(passTestfunc(allcells[m])){continue;}allcells[m].innerText=restored[m];};
 }}
 window.onload = function (){var items = document.getElementsByTagName("td");
 for(i=0;i<items.length;i++){items[i].addEventListener("click",edit);};close();backup();restore();}

@@ -207,7 +207,7 @@ function restore(){
    var table = document.getElementsByTagName("table")[0];
     var allcells = table.querySelectorAll("td");
     var restored = JSON.parse(localStorage.getItem("tdv"));
-if (restored!==null){alert("no")
+if (restored===null){alert("no")
 };
 }
 window.onload = function (){var items = document.getElementsByTagName("td");

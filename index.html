@@ -198,17 +198,15 @@ function passTestfunc(x){if(x.className==="brand"){return true}};
 function backup(){
    var table = document.getElementsByTagName("table")[0];
     var allcells = table.querySelectorAll("td");
-    for (i=0;i<allcells.length;i++)
-    {if(passTestfunc(allcells[i])){continue;}const cellvalues = [];cellvalues.push(allcells[i].innerText;};
-    var stringedtdv = JSON.stringify(cellvalues);
-    localStorage.setItem("tdv","test");}
+    window.localStorage.tdv = "Test";
+    }
 function restore(){
-    var table1=document.getElementsByTagName("table")[0];
-    var allcells = table1.querySelectorAll("td");
-    var restored = localStorage.getItem("tdv");
+    var table=document.getElementsByTagName("table")[0];
+    var allcells = table.querySelectorAll("td");
+    var restored = window.localStorage.getItem("tdv");
 alert(restored);}
 window.onload = function (){var items = document.getElementsByTagName("td");
-for(j=0;j<items.length;j++){items[j].addEventListener("click",edit);};close();}
+for(j=0;j<items.length;j++){items[j].addEventListener("click",edit)};close();backup();}
 
         </script>
     </body>

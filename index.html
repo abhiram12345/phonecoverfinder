@@ -205,7 +205,9 @@ function backup(){
     }
 function restore(){
     var table=document.getElementsByTagName("table")[0];
-    var allcells = table.querySelectorAll("td");
+    var allcells1 = table.querySelectorAll("td");
+    var allcells = allcells1.filter(allcells=>allcells.className!=="brand");
+    
     var restored = window.localStorage.getItem("tdv");
     var restored2 = JSON.parse(restored);
     for(k=0;k<allcells.length;k++){if(passTestfunc(allcells[k])===true){continue}allcells[k].innerText=restored2[k]};

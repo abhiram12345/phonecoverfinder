@@ -205,12 +205,11 @@ function backup(){
 function restore(){
     var table1=document.getElementsByTagName("table")[0];
     var allcells = table1.querySelectorAll("td");
-    var restored = JSON.parse(localStorage.getItem("tdv"));
-alert(restored);}
+    var restored = JSON.parse(localStorage.getItem("tdv"));}
 window.onload = function (){var items = document.getElementsByTagName("td");
 for(j=0;j<items.length;j++){items[j].addEventListener("click",edit);};close();backup();}
 
         </script>
-        <div>2</div>
+        <div>3</div>
     </body>
 </html>

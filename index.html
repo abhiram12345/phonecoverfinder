@@ -210,7 +210,7 @@ function restore(){
     var allcells = allcells1.filter(passTest2);
     var restored = window.localStorage.getItem("tdv");
     var restored2 = JSON.parse(restored);
-    for(k=0;k<allcells.length;k++){if(passTestfunc(allcells[k])===true){continue}allcells[k].innerText=restored2[k]};
+    for(k=0;k<allcells.length;k++){allcells[k].innerText=restored2[k]};
 alert(restored2);}
 window.onload = function (){var items = document.getElementsByTagName("td");
 for(j=0;j<items.length;j++){items[j].addEventListener("click",edit)};close();restore()}

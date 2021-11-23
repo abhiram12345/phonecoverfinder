@@ -198,13 +198,15 @@ function passTestfunc(x){if(x.className==="brand"){return true}};
 function backup(){
    var table = document.getElementsByTagName("table")[0];
     var allcells = table.querySelectorAll("td");
-    window.localStorage.tdv = "Test";
+    var itemss = ["test1","test2"];
+    window.localStorage.tdv = JSON.stringify(itemss);
     }
 function restore(){
     var table=document.getElementsByTagName("table")[0];
     var allcells = table.querySelectorAll("td");
     var restored = window.localStorage.getItem("tdv");
-alert(restored);}
+    var restored2 = JSON.parse(restored);
+alert(restored2);}
 window.onload = function (){var items = document.getElementsByTagName("td");
 for(j=0;j<items.length;j++){items[j].addEventListener("click",edit)};close();backup();}
 

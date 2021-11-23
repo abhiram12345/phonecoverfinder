@@ -195,7 +195,7 @@ document.getElementById("outicon").onclick=function(){inputalert.innerHTML = "No
 }
 function close(){document.getElementById("closer").onclick = function(){document.getElementById("popupp").style.display="none";document.getElementById("inputc").style.display = "none";}}
 function passTestfunc(x){if(x.className==="brand"){return true}};
-function passTest2(y){if(y.className!=="brand"){return y}};
+function passTest2(y){return y.className !== "brand"};
 function backup(){
    var table = document.getElementsByTagName("table")[0];
     var allcells = table.querySelectorAll("td");

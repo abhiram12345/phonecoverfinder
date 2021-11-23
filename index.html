@@ -208,9 +208,9 @@ function restore(){
     var allcells = table.querySelectorAll("td");
     var restored = window.localStorage.getItem("tdv");
     var restored2 = JSON.parse(restored);
-alert(restored2);}
+    for(k=0;k<allcells.length;k++){if(passTestfunc(allcells(k))===true){continue}allcells[k].innerText=restored2[k]};}
 window.onload = function (){var items = document.getElementsByTagName("td");
-for(j=0;j<items.length;j++){items[j].addEventListener("click",edit)};close();}
+for(j=0;j<items.length;j++){items[j].addEventListener("click",edit)};close();restore()}
 
         </script>
     </body>

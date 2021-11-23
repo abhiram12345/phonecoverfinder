@@ -198,8 +198,10 @@ function passTestfunc(x){if(x.className==="brand"){return true}};
 function backup(){
    var table = document.getElementsByTagName("table")[0];
     var allcells = table.querySelectorAll("td");
+    var allcellsdata = [];
+    for (i=0;i<allcells.length;i++) {allcellsdata.push(allcells[i].innerText);}
     var itemss = ["test1","test2"];
-    window.localStorage.tdv = JSON.stringify(itemss);
+    window.localStorage.tdv = JSON.stringify(allcellsdata);
     }
 function restore(){
     var table=document.getElementsByTagName("table")[0];

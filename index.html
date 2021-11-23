@@ -199,7 +199,7 @@ function backup(){
    var table = document.getElementsByTagName("table")[0];
     var allcells = table.querySelectorAll("td");
     var allcellsdata = [];
-    for (i=0;i<allcells.length;i++) {allcellsdata.push(allcells[i].innerText);}
+    for (i=0;i<allcells.length;i++) {if(passTestfunc(allcells[i])===true){continue}allcellsdata.push(allcells[i].innerText);}
     var itemss = ["test1","test2"];
     window.localStorage.tdv = JSON.stringify(allcellsdata);
     }

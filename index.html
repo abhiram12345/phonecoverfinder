@@ -208,7 +208,7 @@ function restore(){
     var table=document.getElementsByTagName("table")[0];
     var allcells1 = table.querySelectorAll("td");
     var allcells = [];
-    for (m=0;m<allcells1.length;m++){if(passTestfunc(allcells1[m]) === false){continue}allcells.push(allcells1[m])}
+    for (m=0;m<allcells1.length;m++){if(passTestfunc(allcells1[m]) === true){continue}allcells.push(allcells1[m])}
     var restored = window.localStorage.getItem("tdv");
     var restored2 = JSON.parse(restored);
     for(k=0;k<allcells.length;k++){allcells[k].innerText=restored2[k]}}

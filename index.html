@@ -23,55 +23,61 @@ th,td{padding:15px;}
                  <th>Stock</th>
                 </tr>
                 <tr>
-                    <td class="brand">Redmi Note 4</td>
+                    <td class="brand">Model</td>
                     <td>0</td>
                     <td>0</td>
                     <td>0</td>
                 </tr>
                 <tr>
-                    <td class="brand">Redmi 4x</td>
+                    <td class="brand">Model</td>
                     <td>0</td>
                     <td>0</td>
                     <td>0</td>
                 </tr>
                 <tr>
-                    <td class="brand">Redmi Note 5</td>
+                    <td class="brand">Model</td>
                 <td>0</td>
                     <td>0</td>
                     <td>0</td>
                 </tr>
                 <tr>
-                    <td class="brand">Redmi Note 3</td>
+                    <td class="brand">Model</td>
                     <td>0</td>
                     <td>0</td>
                     <td>0</td>
                 </tr>
                 <tr>
-                    <td class="brand">Redmi A3</td>
+                    <td class="brand">Model</td>
                     <td>0</td>
                     <td>0</td>
                     <td>0</td>
                 </tr>
                 <tr>
-                    <td class="brand">Redmi A2</td>
+                    <td class="brand">Model</td>
                     <td>0</td>
                     <td>0</td>
                     <td>0</td>
                 </tr>
                 <tr>
-                    <td class="brand">Redmi A1</td>
+                    <td class="brand">Model</td>
                     <td>0</td>
                     <td>0</td>
                     <td>0</td>
                 </tr>
                 <tr>
-                    <td class="brand">Redmi 9A</td>
+                    <td class="brand">Model</td>
                     <td>0</td>
                     <td>0</td>
                     <td>0</td>
                 </tr>
                 <tr>
-                    <td class="brand">Redmi 7</td>
+                    <td class="brand">Model</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td class="brand">Model</td>
                     <td>0</td>
                     <td>0</td>
                     <td>0</td>
@@ -241,14 +247,12 @@ function backup(){
    var table = document.getElementsByTagName("table")[0];
     var allcells = table.querySelectorAll("td");
     var allcellsdata = [];
-    for (i=0;i<allcells.length;i++) {if(passTestfunc(allcells[i])===true){continue}allcellsdata.push(allcells[i].innerText);}
+    for (i=0;i<allcells.length;i++) {allcellsdata.push(allcells[i].innerText);}
     window.localStorage.tdv = JSON.stringify(allcellsdata);
     }
 function restore(){
     var table=document.getElementsByTagName("table")[0];
-    var allcells1 = table.querySelectorAll("td");
-    var allcells = [];
-    for (m=0;m<allcells1.length;m++){if(passTestfunc(allcells1[m]) === true){continue}allcells.push(allcells1[m])}
+    var allcells = table.querySelectorAll("td");
     var restored = window.localStorage.getItem("tdv");
     var restored2 = JSON.parse(restored);
     for(k=0;k<allcells.length;k++){allcells[k].innerText=restored2[k]}}

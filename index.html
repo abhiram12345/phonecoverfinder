@@ -239,7 +239,7 @@ th,td{padding:15px;}
                 </tr>
             </table>
         </div>
-        <div class="search"><input type = "search" id ="searchbrand" placeholder="Search brand"></div>
+        <div class="search"><input type = "search" id ="searchbrand" placeholder="Search brand" onchange="search()"></div>
         <script>
             function create(){var body = document.getElementsByTagName("body")[0];
 //Linebreak
@@ -411,6 +411,12 @@ function restore(){
     var restored = window.localStorage.getItem("tdv");
     var restored2 = JSON.parse(restored);
     for(k=0;k<allcells.length;k++){allcells[k].innerText=restored2[k]}}
+ function search(){
+     var objs = document.getElementsByClassName("brand");
+     var serchterm = document.getElementById("searchbrand").value;
+     for (p=0;p<objs.length;p++){if(objs[p].innerText && searchterm){continue}{objs[p].parentElement.style.display = "none";}};
+                                                 }
+     
 window.onload = function (){var items = document.getElementsByTagName("td");
 for(j=0;j<items.length;j++){items[j].addEventListener("click",edit)};close();restore()}
 

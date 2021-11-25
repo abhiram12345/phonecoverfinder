@@ -237,13 +237,11 @@ document.getElementById("outicon").onclick=function(){inputalert.innerHTML = "No
 }
 function close(){document.getElementById("closer").onclick = function(){document.getElementById("popupp").style.display="none";document.getElementById("inputc").style.display = "none";}}
 function passTestfunc(x){if(x.className==="brand"){return true}};
-function passTest2(y){if (y.className !== "brand"){return y}};
 function backup(){
    var table = document.getElementsByTagName("table")[0];
     var allcells = table.querySelectorAll("td");
     var allcellsdata = [];
     for (i=0;i<allcells.length;i++) {if(passTestfunc(allcells[i])===true){continue}allcellsdata.push(allcells[i].innerText);}
-    var itemss = ["test1","test2"];
     window.localStorage.tdv = JSON.stringify(allcellsdata);
     }
 function restore(){

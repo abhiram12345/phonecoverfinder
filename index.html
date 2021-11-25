@@ -414,7 +414,7 @@ function restore(){
  function search(){
      var objs = document.getElementsByClassName("brand");
      var serchterm = document.getElementById("searchbrand").value;
-     for (p=0;p<objs.length;p++){if(objs[p].innerText.includes(searchterm)===false){continue}objs[p].parentElement.style.display = "none";}}    
+     for (p=0;p<objs.length;p++){if(objs[p].innerText.includes(searchterm)===e){continue}objs[p].parentElement.style.display = "none";}}    
 window.onload = function (){var items = document.getElementsByTagName("td");
 for(j=0;j<items.length;j++){items[j].addEventListener("click",edit)};close();restore()}
 

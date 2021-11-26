@@ -422,7 +422,7 @@ document.getElementById("inicon").onclick=function(){inputalert.innerHTML = "No 
 //sold
 document.getElementById("outicon").onclick=function(){inputalert.innerHTML = "No of items sold:";inputc.style.display = "block";input.value="0";gobutton.onclick=function(){if(isNaN(input.value)===false && input.value<=parseInt(cells[3].innerText) && input.value>=0){cells[3].innerText=parseInt(cells[3].innerText)-parseInt(input.value);popupp.style.display = "none";inputc.style.display="none";backup();lastitem()}}}
 function lastitem(){
-document.getElementById("options1").innerHTML = cells[0].innerText;}
+document.getElementById("option1").innerHTML = cells[0].innerText;}
 }
 function close(){document.getElementById("closer").onclick = function(){document.getElementById("popupp").style.display="none";document.getElementById("inputc").style.display = "none";}}
 function passTestfunc(x){if(x.className==="brand"){return true}};

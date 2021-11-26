@@ -12,7 +12,7 @@ th,td{padding:15px;}
             tr:nth-child(even){background-color:#d8d8d8}
             input{padding:10px;font-size:15px;border:1px solid gray;border-radius:50px;position:fixed;display:block;bottom:20px;left:50%;transform:translateX(-50%)}
             #menu{position:fixed;bottom:40px;right:40px}
-            #options{position:fixed;top:50px;bottom:50px;background-color:#303030;display:none}
+            #options{position:fixed;width:50%;top:50px;bottom:50px;background-color:#303030;color:white;display:none}
         </style>
     </head>
     <body>
@@ -446,7 +446,7 @@ var optiontab = document.getElementById("options");
 if(optiontab.style.display === "none"){optiontab.style.display="block"}
 else{optiontab.style.display="none"}}
 function lastitem(){
-document.getElementById("options").innerHTML = this.parentElement.firstChild.innerText;}
+document.getElementById("options").innerHTML = this.parentElement.firstElementChild.innerText;}
 window.onload = function (){var items = document.getElementsByTagName("td");
 for(j=0;j<items.length;j++){items[j].addEventListener("click",edit)};close();restore()}
 

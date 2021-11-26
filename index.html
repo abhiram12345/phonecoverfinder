@@ -432,8 +432,7 @@ function restore(){
 
  function search(){ var objs = document.getElementsByClassName("brand");
 var searchterm = document.getElementById("searchbrand").value.toLowerCase();
-searchterm.replace(/ /g,"");
-for (p=0;p<objs.length;p++){objs[p].innerText.replace(/ /g,"");
+for (p=0;p<objs.length;p++){
 if(objs[p].innerText.toLowerCase().includes(searchterm)===true){objs[p].parentElement.style.display = "table-row";}
 else{objs[p].parentElement.style.display = "none";}}}
 window.onload = function (){var items = document.getElementsByTagName("td");

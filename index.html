@@ -418,7 +418,7 @@ inputc.style.display = "block";document.getElementById("input").value = cell.inn
 //bought
 document.getElementById("inicon").onclick=function(){inputalert.innerHTML = "No of items showcased:";inputc.style.display = "block";input.value="0";gobutton.onclick=function(){if(isNaN(input.value)===false && input.value>=0){cells[3].innerText=parseInt(cells[3].innerText)+parseInt(input.value);popupp.style.display = "none";inputc.style.display="none";backup();}}}
 //sold
-document.getElementById("outicon").onclick=function(){inputalert.innerHTML = "No of items sold:";inputc.style.display = "block";input.value="0";gobutton.onclick=function(){if(isNaN(input.value)===false && input.value<=parseInt(cells[3].innerText) && input.value>=0){cells[3].innerText=parseInt(cells[3].innerText)-parseInt(input.value);popupp000000000000.style.display = "none";inputc.style.display="none";backup();lastitem()}}}
+document.getElementById("outicon").onclick=function(){inputalert.innerHTML = "No of items sold:";inputc.style.display = "block";input.value="0";gobutton.onclick=function(){if(isNaN(input.value)===false && input.value<=parseInt(cells[3].innerText) && input.value>=0){cells[3].innerText=parseInt(cells[3].innerText)-parseInt(input.value);popupp.style.display = "none";inputc.style.display="none";backup();lastitem()}}}
 function lastitem(){
 document.getElementById("options").innerHTML = cells[0].innerText;}
 }

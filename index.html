@@ -434,8 +434,7 @@ function restore(){
 var searchterm = document.getElementById("searchbrand").value.toLowerCase();
 var searchterm2 = searchterm.split(" ").join("");
 for (p=0;p<objs.length;p++){var objstext = objs[p].innerText.toLowerCase();var objstext2 = objstext.split(" ").join("");if(objstext2.includes(searchterm)===true){objs[p].parentElement.style.display = "table-row";}
-else{objs[p].parentElement.style.display = "none";}
-if (document.getElementById("searchbrand").value === null){objs[p].parentElement.style.display = "table-row";}}
+else{objs[p].parentElement.style.display = "none";}}}
 window.onload = function (){var items = document.getElementsByTagName("td");
 for(j=0;j<items.length;j++){items[j].addEventListener("click",edit)};close();restore()}
 

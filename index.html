@@ -11,6 +11,7 @@ table,td{border:1px solid #303030;border-collapse:collapse;}
 th,td{padding:15px;}
             tr:nth-child(even){background-color:#d8d8d8}
             input{padding:10px;font-size:15px;border:1px solid gray;border-radius:50px;position:fixed;display:block;bottom:20px;left:50%;transform:translateX(-50%)}
+            #showoptions{position:fixed;top:50px;bottom:50px;display:none}
         </style>
     </head>
     <body>
@@ -258,6 +259,10 @@ th,td{padding:15px;}
             </table>
         </div>
         <div class="search"><input type = "text" id ="searchbrand" placeholder="Search brand" onkeyup="search()"></div>
+        <div id="options">
+        last item sold:
+        </div>
+        <button id="menu" onclick="showoptions()">Menu</button>
         <script>
             function create(){var body = document.getElementsByTagName("body")[0];
 //Linebreak
@@ -435,6 +440,8 @@ var searchterm = document.getElementById("searchbrand").value.toLowerCase();
 var searchterm2 = searchterm.split(" ").join("");
 for (p=0;p<objs.length;p++){var objstext = objs[p].innerText.toLowerCase();var objstext2 = objstext.split(" ").join("");if(objstext2.includes(searchterm2)===true){objs[p].parentElement.style.display = "table-row";}
 else{objs[p].parentElement.style.display = "none";}}}
+function showoptions(){
+document.getElementById("options").style.display = "block"}
 window.onload = function (){var items = document.getElementsByTagName("td");
 for(j=0;j<items.length;j++){items[j].addEventListener("click",edit)};close();restore()}
 

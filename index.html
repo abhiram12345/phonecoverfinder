@@ -12,7 +12,7 @@ th,td{padding:15px;}
             tr:nth-child(even){background-color:#d8d8d8}
             input{padding:10px;font-size:15px;border:1px solid gray;border-radius:50px;position:fixed;display:block;bottom:20px;left:50%;transform:translateX(-50%)}
             #menu{position:fixed;bottom:40px;right:40px}
-            #options{position:fixed;width:50%;top:50px;bottom:50px;background-color:#303030;color:white;display:none}
+            #options{position:fixed;width:50%;top:50px;bottom:50px;padding:30px;background-color:#303030;color:white;display:none}
         </style>
     </head>
     <body>
@@ -261,7 +261,9 @@ th,td{padding:15px;}
         </div>
         <div class="search"><input type = "text" id ="searchbrand" placeholder="Search brand" onkeyup="search()"></div>
         <div id="options">
-        last item sold:
+            Last Item Sold
+        <div id="option1">
+        </div>
         </div>
         <button id="menu" onclick="showoptions()">Menu</button>
         <script>
@@ -420,7 +422,7 @@ document.getElementById("inicon").onclick=function(){inputalert.innerHTML = "No 
 //sold
 document.getElementById("outicon").onclick=function(){inputalert.innerHTML = "No of items sold:";inputc.style.display = "block";input.value="0";gobutton.onclick=function(){if(isNaN(input.value)===false && input.value<=parseInt(cells[3].innerText) && input.value>=0){cells[3].innerText=parseInt(cells[3].innerText)-parseInt(input.value);popupp.style.display = "none";inputc.style.display="none";backup();lastitem()}}}
 function lastitem(){
-document.getElementById("options").innerHTML = cells[0].innerText;}
+document.getElementById("options1").innerHTML = cells[0].innerText;}
 }
 function close(){document.getElementById("closer").onclick = function(){document.getElementById("popupp").style.display="none";document.getElementById("inputc").style.display = "none";}}
 function passTestfunc(x){if(x.className==="brand"){return true}};
